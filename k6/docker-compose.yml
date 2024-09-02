@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  k6:
+    image: grafana/k6:latest
+    container_name: k6
+    volumes:
+      - .:/scripts
+    entrypoint: ["k6", "run", "/scripts/api_test.js"]
+    networks:
+      - prometheus-go_monitoring
+    environment:
+      - PROMETHEUS_URL=http://prometheus:9090  # Adjust to match your Prometheus service URL
+
+networks:
+  prometheus-go_monitoring:
+    external: true  # Use the existing external network
