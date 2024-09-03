@@ -28,4 +28,4 @@ This project demonstrates a simple Gin-based web service that integrates with Pr
 1. **Youtube**:
 
    ```bash
-   link youtube here
+   https://www.youtube.com/watch?v=uGGkCVsqQQg
